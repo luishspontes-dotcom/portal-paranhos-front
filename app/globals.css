@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #020617;
+  --foreground: #f1f5f9;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Markdown styling improvements */
+.prose {
+  @apply text-slate-300;
+}
+
+.prose h1 {
+  @apply text-slate-50;
+}
+
+.prose h2 {
+  @apply text-slate-100;
+}
+
+.prose h3 {
+  @apply text-slate-100;
+}
+
+.prose a {
+  @apply text-emerald-400 hover:text-emerald-300 no-underline;
+}
+
+.prose strong {
+  @apply text-emerald-400 font-bold;
+}
+
+.prose code {
+  @apply bg-slate-800 text-emerald-400 px-2 py-1 rounded;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-emerald-500 italic;
+}

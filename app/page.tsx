@@ -1,5 +1,13 @@
 import Link from 'next/link';
 
+// Números do Paraná (estatísticas atualizadas)
+const PARANA_STATS = {
+  municipios: 399,
+  prefeitosComWhatsApp: 507,
+  vicesComWhatsApp: 522,
+  vereadoresComWhatsApp: 2006,
+} as const;
+
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
@@ -32,7 +40,7 @@ export default function HomePage() {
               </p>
               
               <p className="text-lg text-slate-300 max-w-xl leading-relaxed">
-                Um novo jeito de enxergar os 399 municípios do Paraná, conectando pessoas, dados e oportunidades em um único ecossistema de gestão pública e inovação.
+                Um novo jeito de enxergar os {PARANA_STATS.municipios} municípios do Paraná, conectando pessoas, dados e oportunidades em um único ecossistema de gestão pública e inovação.
               </p>
               
               <div className="flex flex-wrap gap-4 pt-4">
@@ -46,7 +54,7 @@ export default function HomePage() {
                   href="/biografia"
                   className="px-6 py-3 rounded-full border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-950 font-semibold transition"
                 >
-                  Biografia do Paranhos
+                  Biografia
                 </Link>
               </div>
             </div>
@@ -105,37 +113,37 @@ export default function HomePage() {
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Card 1 */}
+            {/* Card 1 - Municípios */}
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-6 hover:border-emerald-500 transition group">
               <div className="text-5xl font-bold text-emerald-400 mb-2 group-hover:scale-110 transition">
-                399
+                {PARANA_STATS.municipios}
               </div>
               <p className="text-slate-300 font-medium">Municípios</p>
               <p className="text-slate-500 text-sm mt-1">cadastrados no portal</p>
             </div>
             
-            {/* Card 2 */}
+            {/* Card 2 - Prefeitos */}
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-6 hover:border-emerald-500 transition group">
               <div className="text-5xl font-bold text-emerald-400 mb-2 group-hover:scale-110 transition">
-                507
+                {PARANA_STATS.prefeitosComWhatsApp}
               </div>
               <p className="text-slate-300 font-medium">Prefeitos</p>
               <p className="text-slate-500 text-sm mt-1">com WhatsApp cadastrado</p>
             </div>
             
-            {/* Card 3 */}
+            {/* Card 3 - Vice-Prefeitos */}
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-6 hover:border-emerald-500 transition group">
               <div className="text-5xl font-bold text-emerald-400 mb-2 group-hover:scale-110 transition">
-                522
+                {PARANA_STATS.vicesComWhatsApp}
               </div>
               <p className="text-slate-300 font-medium">Vice-Prefeitos</p>
               <p className="text-slate-500 text-sm mt-1">com WhatsApp cadastrado</p>
             </div>
             
-            {/* Card 4 */}
+            {/* Card 4 - Vereadores */}
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-6 hover:border-emerald-500 transition group">
               <div className="text-5xl font-bold text-emerald-400 mb-2 group-hover:scale-110 transition">
-                2.006
+                {PARANA_STATS.vereadoresComWhatsApp.toLocaleString('pt-BR')}
               </div>
               <p className="text-slate-300 font-medium">Vereadores</p>
               <p className="text-slate-500 text-sm mt-1">com WhatsApp cadastrado</p>
@@ -159,7 +167,7 @@ export default function HomePage() {
               <div className="text-center">
                 <div className="text-8xl mb-4">🗺️</div>
                 <p className="text-emerald-400 font-semibold text-xl">Mapa do Paraná</p>
-                <p className="text-slate-400 mt-2">Interativo com os 399 municípios</p>
+                <p className="text-slate-400 mt-2">Interativo com os {PARANA_STATS.municipios} municípios</p>
               </div>
             </div>
             
@@ -333,7 +341,7 @@ export default function HomePage() {
             <div>
               <h3 className="text-emerald-400 font-bold text-lg mb-4">Portal Paranhos</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Conectando os 399 municípios do Paraná através de dados, gestão pública e inovação.
+                Conectando os {PARANA_STATS.municipios} municípios do Paraná através de dados, gestão pública e inovação.
               </p>
             </div>
             

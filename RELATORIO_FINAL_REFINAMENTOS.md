@@ -534,7 +534,7 @@ Arquivos adicionados:
 **🌲 "Vem pra cá, vem pro Paraná!" 🌲**
 
 **Relatório gerado em:** 17 de Novembro de 2025  
-**Projeto:** Portal Paranhos - Secretaria de Estado do Turismo do Paraná  
+**Projeto:** Portal Paranhos (Projeto pessoal de Leonaldo Paranhos e equipe)  
 **Status Final:** ✅ **SUCESSO TOTAL**
 
 ---

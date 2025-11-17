@@ -127,7 +127,7 @@ Cada card tem:
 - Grid 3 colunas:
   - Sobre o Portal
   - Links rápidos (Biografia, Sobre, Municípios)
-  - Institucional (Secretaria de Turismo)
+  - Sobre (Projeto pessoal de Leonaldo Paranhos e equipe)
 - Copyright 2025
 - Slogan em destaque
 

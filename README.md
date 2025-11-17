@@ -184,12 +184,12 @@ Conforme o checklist em `docs/municipios-checklist.md`, o banco possui:
    - Criar logo do Portal Paranhos
    - Adicionar imagens dos municípios
 
-## 📄 Licença
+## 📄 Sobre o Projeto
 
-Portal Paranhos - Governo do Estado do Paraná © 2025
+Portal Paranhos é um projeto pessoal de Leonaldo Paranhos, Secretário de Estado do Turismo do Paraná, e sua equipe.
+
+© 2025 Portal Paranhos. Todos os direitos reservados.
 
 ---
-
-**Desenvolvido para a Secretaria de Estado do Turismo do Paraná**
 
 *"Vem pra cá, vem pro Paraná!"* 🌲

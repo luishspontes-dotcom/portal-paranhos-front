@@ -367,10 +367,9 @@ export default function HomePage() {
             </div>
             
             <div>
-              <h4 className="text-slate-300 font-semibold mb-4">Institucional</h4>
+              <h4 className="text-slate-300 font-semibold mb-4">Sobre</h4>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Secretaria de Estado do Turismo do Paraná<br />
-                Governo do Estado do Paraná
+                Portal Paranhos é um projeto pessoal de Leonaldo Paranhos, Secretário de Estado do Turismo do Paraná, e sua equipe.
               </p>
             </div>
           </div>

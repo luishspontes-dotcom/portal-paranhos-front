@@ -6,7 +6,7 @@
  * Inclui funções mock para desenvolvimento sem backend.
  */
 
-import { API_ENDPOINTS, API_CONFIG } from '@/app/config/api';
+import { API_ENDPOINTS } from '@/app/config/api';
 import { apiGet } from '@/app/lib/api-client';
 import type {
   Municipio,
@@ -387,7 +387,7 @@ async function listarMunicipiosApi(filtros?: MunicipiosFiltros): Promise<ListaMu
 async function buscarMunicipioPorIdApi(id: number): Promise<MunicipioCompleto | null> {
   try {
     return await apiGet<MunicipioCompleto>(API_ENDPOINTS.MUNICIPIO_BY_ID(id));
-  } catch (error) {
+  } catch {
     return null;
   }
 }

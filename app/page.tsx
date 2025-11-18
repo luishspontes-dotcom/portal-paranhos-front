@@ -152,59 +152,101 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MAPA E MUNICÍPIOS */}
+      {/* RECURSOS DO PORTAL */}
       <section className="py-20 bg-slate-900/50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Explore os Municípios</h2>
-            <p className="text-slate-400 text-lg">Conheça cada região do Paraná</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Recursos do Portal</h2>
+            <p className="text-slate-400 text-lg">Explore as funcionalidades disponíveis</p>
             <div className="w-20 h-1 bg-emerald-500 mx-auto rounded mt-4" />
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Mapa Placeholder */}
-            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 h-96 flex items-center justify-center">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Municípios */}
+            <Link 
+              href="/municipios"
+              className="bg-slate-900 border border-slate-800 rounded-3xl p-8 hover:border-emerald-500 transition group"
+            >
               <div className="text-center">
-                <div className="text-8xl mb-4">🗺️</div>
-                <p className="text-emerald-400 font-semibold text-xl">Mapa do Paraná</p>
-                <p className="text-slate-400 mt-2">Interativo com os {PARANA_STATS.municipios} municípios</p>
+                <div className="text-6xl mb-4 group-hover:scale-110 transition">🏙️</div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-400 transition">Municípios</h3>
+                <p className="text-slate-400 text-sm">
+                  Explore os {PARANA_STATS.municipios} municípios com dados completos de gestores e indicadores
+                </p>
               </div>
-            </div>
+            </Link>
             
-            {/* Info */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold">Navegue por território e classificação</h3>
-              <p className="text-slate-300 leading-relaxed">
-                O Portal Paranhos organiza os municípios por território turístico e classificação administrativa, facilitando a visualização de dados estratégicos, contatos de gestores e indicadores regionais.
+            {/* Mapa */}
+            <Link 
+              href="/mapa"
+              className="bg-slate-900 border border-slate-800 rounded-3xl p-8 hover:border-emerald-500 transition group"
+            >
+              <div className="text-center">
+                <div className="text-6xl mb-4 group-hover:scale-110 transition">🗺️</div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-400 transition">Mapa Interativo</h3>
+                <p className="text-slate-400 text-sm">
+                  Visualize no mapa os municípios do Paraná e suas localizações
+                </p>
+              </div>
+            </Link>
+            
+            {/* Agenda */}
+            <Link 
+              href="/agenda"
+              className="bg-slate-900 border border-slate-800 rounded-3xl p-8 hover:border-emerald-500 transition group"
+            >
+              <div className="text-center">
+                <div className="text-6xl mb-4 group-hover:scale-110 transition">📅</div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-400 transition">Agenda de Eventos</h3>
+                <p className="text-slate-400 text-sm">
+                  Acompanhe eventos, reuniões e atividades nos municípios
+                </p>
+              </div>
+            </Link>
+          </div>
+          
+          {/* Info Adicional */}
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+              <h3 className="text-xl font-bold mb-3">Classificação Municipal</h3>
+              <p className="text-slate-300 mb-4 text-sm leading-relaxed">
+                Os municípios são classificados por território turístico e classificação administrativa
               </p>
-              
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <span className="text-slate-300">Municípios Ouro</span>
+                  <span className="text-slate-300 text-sm">Municípios Ouro</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-slate-400" />
-                  <span className="text-slate-300">Municípios Prata</span>
+                  <span className="text-slate-300 text-sm">Municípios Prata</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-orange-600" />
-                  <span className="text-slate-300">Municípios Bronze</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-slate-600" />
-                  <span className="text-slate-300">Sem classificação</span>
+                  <span className="text-slate-300 text-sm">Municípios Bronze</span>
                 </div>
               </div>
-              
-              <div className="pt-4">
-                <Link 
-                  href="/municipios"
-                  className="inline-block px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white font-semibold transition"
-                >
-                  Ver todos os municípios →
-                </Link>
-              </div>
+            </div>
+            
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+              <h3 className="text-xl font-bold mb-3">Dados em Tempo Real</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Acesse informações atualizadas sobre gestores municipais, eventos e estatísticas regionais
+              </p>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span className="text-slate-300">Contatos diretos via WhatsApp</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span className="text-slate-300">População e eleitores IBGE/TSE</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span className="text-slate-300">Territórios turísticos oficiais</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -354,13 +396,23 @@ export default function HomePage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/sobre" className="text-slate-400 hover:text-emerald-400 transition">
-                    Sobre o Portal
+                  <Link href="/municipios" className="text-slate-400 hover:text-emerald-400 transition">
+                    Municípios
                   </Link>
                 </li>
                 <li>
-                  <Link href="/municipios" className="text-slate-400 hover:text-emerald-400 transition">
-                    Municípios
+                  <Link href="/mapa" className="text-slate-400 hover:text-emerald-400 transition">
+                    Mapa Interativo
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/agenda" className="text-slate-400 hover:text-emerald-400 transition">
+                    Agenda de Eventos
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/sobre" className="text-slate-400 hover:text-emerald-400 transition">
+                    Sobre o Portal
                   </Link>
                 </li>
               </ul>

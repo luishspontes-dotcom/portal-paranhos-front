@@ -16,6 +16,7 @@ export class ApiError extends Error {
     message: string,
     public status: number,
     public statusText: string,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public data?: any
   ) {
     super(message);
@@ -113,6 +114,7 @@ export async function apiGet<T>(
  */
 export async function apiPost<T>(
   endpoint: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any,
   options: FetchOptions = {}
 ): Promise<T> {

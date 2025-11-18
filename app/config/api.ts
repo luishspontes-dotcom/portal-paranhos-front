@@ -44,6 +44,10 @@ export const API_ENDPOINTS = {
   VEREADORES: '/vereadores',
   VEREADORES_BY_MUNICIPIO: (municipioId: string | number) => `/vereadores/municipio/${municipioId}`,
   
+  // Eventos e Agenda
+  EVENTOS: '/eventos',
+  EVENTO_BY_ID: (id: string | number) => `/eventos/${id}`,
+  
   // Estatísticas
   STATS_GERAIS: '/stats/gerais',
   STATS_MUNICIPIO: (municipioId: string | number) => `/stats/municipio/${municipioId}`,
